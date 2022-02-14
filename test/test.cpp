@@ -3,12 +3,14 @@
 
 #include <iostream>
 void ExecuteTemplateTestCode();
+void ExecuteLamdaTestCode();
 
 
 
 int main()
 {
     ExecuteTemplateTestCode();
+    ExecuteLamdaTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

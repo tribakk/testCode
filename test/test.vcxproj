@@ -139,10 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
+    <ClCompile Include="code\lambda\testClass.cpp" />
     <ClCompile Include="code\template\invokeMethod.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\template\example01.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
