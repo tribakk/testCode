@@ -27,7 +27,7 @@
     <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="code\template\invokeMethod.cpp">
+    <ClCompile Include="code\template\invokeMethod_template.cpp">
       <Filter>code\template</Filter>
     </ClCompile>
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp">

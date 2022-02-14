@@ -141,7 +141,7 @@
   <ItemGroup>
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
-    <ClCompile Include="code\template\invokeMethod.cpp" />
+    <ClCompile Include="code\template\invokeMethod_template.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
