@@ -2,39 +2,13 @@
 //
 
 #include <iostream>
+void ExecuteTemplateTestCode();
 
-template <typename T>
-class A
-{
-public:
-    int a;
-};
-
-template <typename T>
-class B : public A<T>
-{
-public:
-    int b;
-};
-
-class C : public B<C>
-{
-public:
-    int c;
-};
 
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    if (true)
-    {
-        C* c = new C();
-        c->a = 15;
-        c->b = 31;
-        c->c = 47;
-        c = c;
-    }
+    ExecuteTemplateTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
