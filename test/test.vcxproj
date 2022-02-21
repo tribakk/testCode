@@ -141,11 +141,14 @@
   <ItemGroup>
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
+    <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp" />
+    <ClCompile Include="code\stdStl\unordered_map_example.cpp" />
     <ClCompile Include="code\template\invokeMethod_template.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\lambda\testClass.h" />
+    <ClInclude Include="code\stdStl\unordered_map_example.h" />
     <ClInclude Include="code\template\example01.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

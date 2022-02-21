@@ -4,6 +4,7 @@
 #include <iostream>
 void ExecuteTemplateTestCode();
 void ExecuteLamdaTestCode();
+void ExecuteStdStlCode();
 
 
 
@@ -11,6 +12,7 @@ int main()
 {
     ExecuteTemplateTestCode();
     ExecuteLamdaTestCode();
+    ExecuteStdStlCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

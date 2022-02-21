@@ -22,6 +22,9 @@
     <Filter Include="code\lambda">
       <UniqueIdentifier>{b5a9d7fb-3f70-4d20-bd52-0c92e57b4c79}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\stdStl">
+      <UniqueIdentifier>{f06ef4dc-e311-44da-add5-9842ddd0d6bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -36,6 +39,12 @@
     <ClCompile Include="code\lambda\testClass.cpp">
       <Filter>code\lambda</Filter>
     </ClCompile>
+    <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp">
+      <Filter>code\stdStl</Filter>
+    </ClCompile>
+    <ClCompile Include="code\stdStl\unordered_map_example.cpp">
+      <Filter>code\stdStl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -43,6 +52,9 @@
     </ClInclude>
     <ClInclude Include="code\lambda\testClass.h">
       <Filter>code\lambda</Filter>
+    </ClInclude>
+    <ClInclude Include="code\stdStl\unordered_map_example.h">
+      <Filter>code\stdStl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
