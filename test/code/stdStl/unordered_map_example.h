@@ -36,10 +36,7 @@ struct std::hash<stdStlNS::testStruct1>
 template <>
 struct std::equal_to<stdStlNS::testStruct1>
 {
-	bool operator()(const stdStlNS::testStruct1& lhs, const stdStlNS::testStruct1& rhs) const
-	{
-		return lhs.testA == rhs.testA && lhs.testB == rhs.testB;
-	}
+	bool operator()(const stdStlNS::testStruct1& lhs, const stdStlNS::testStruct1& rhs) const;
 };
 
 namespace stdStlNS
