@@ -16,10 +16,13 @@ namespace stdStlNS
     {
         mainClass mClass;
         
-        testStruct1 s1;
+        testStruct1 s1, s11, s12, s13;
         testStruct2 s2;
         
         mClass._map[s1] = s2;
+        mClass._map[s11] = s2;
+        mClass._map[s12] = s2;
+        mClass._map[s13] = s2;
         //mClass._map2[s1] = s2;
 
         //mClass.Test();

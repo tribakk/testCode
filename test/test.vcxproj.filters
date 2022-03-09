@@ -25,6 +25,9 @@
     <Filter Include="code\stdStl">
       <UniqueIdentifier>{f06ef4dc-e311-44da-add5-9842ddd0d6bc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\cast">
+      <UniqueIdentifier>{45d92d6a-81fc-4541-8672-d8206d25408a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -45,6 +48,12 @@
     <ClCompile Include="code\stdStl\unordered_map_example.cpp">
       <Filter>code\stdStl</Filter>
     </ClCompile>
+    <ClCompile Include="code\cast\invokeMethod_cast.cpp">
+      <Filter>code\cast</Filter>
+    </ClCompile>
+    <ClCompile Include="code\cast\cast_class01.cpp">
+      <Filter>code\cast</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -55,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="code\stdStl\unordered_map_example.h">
       <Filter>code\stdStl</Filter>
+    </ClInclude>
+    <ClInclude Include="code\cast\cast_class01.h">
+      <Filter>code\cast</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

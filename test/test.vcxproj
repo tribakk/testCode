@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="code\cast\cast_class01.cpp" />
+    <ClCompile Include="code\cast\invokeMethod_cast.cpp" />
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
     <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp" />
@@ -147,6 +149,7 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="code\cast\cast_class01.h" />
     <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\stdStl\unordered_map_example.h" />
     <ClInclude Include="code\template\example01.h" />
