@@ -1,4 +1,5 @@
 #include "unordered_map_example.h"
+#include "vector_example.h"
 
 namespace stdStlNS
 {
@@ -56,6 +57,21 @@ namespace stdStlNS
             char* const char5 = char4;
             //char5 = char2;
             char5[2] = 'e';
+        }
+    }
+
+    void Example03()
+    {
+        std::vector<testVector> arrayTest;
+        arrayTest.emplace_back(testVector(1, 1));
+        arrayTest.emplace_back(testVector(2, 2));
+        arrayTest.emplace_back(testVector(3, 3));
+        arrayTest.emplace_back(testVector(4, 4));
+        arrayTest.emplace_back(testVector(5, 5));
+        for (auto iter = arrayTest.begin(); iter != arrayTest.end(); iter++)
+        {
+            iter->testA = 2;
+            iter->testB = 1;
         }
     }
 }
