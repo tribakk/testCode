@@ -12,8 +12,8 @@ void ExecuteCastTestCode();
 int main()
 {
     //ExecuteTemplateTestCode();
-    //ExecuteLamdaTestCode();
-    ExecuteStdStlCode();
+    ExecuteLamdaTestCode();
+    //ExecuteStdStlCode();
     //ExecuteCastTestCode();
 }
 
