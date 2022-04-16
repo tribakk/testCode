@@ -7,6 +7,7 @@ void ExecuteLamdaTestCode();
 void ExecuteStdStlCode();
 void ExecuteCastTestCode();
 void ExecuteExceptionTestCode();
+void ExecuteNameSpaceTestCode();
 
 
 
@@ -17,6 +18,7 @@ int main()
     ExecuteStdStlCode();
     //ExecuteCastTestCode();
     ExecuteExceptionTestCode();
+    ExecuteNameSpaceTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

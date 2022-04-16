@@ -31,6 +31,9 @@
     <Filter Include="code\exception">
       <UniqueIdentifier>{1d5420b6-df37-4916-aa89-a2e64826fc27}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\namespace">
+      <UniqueIdentifier>{00fd4d15-abb1-46c5-8888-dad1ef2a074a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -62,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="code\exception\invokeMethod_exception.cpp">
       <Filter>code\exception</Filter>
+    </ClCompile>
+    <ClCompile Include="code\namespace\invokeMethod_namespace.cpp">
+      <Filter>code\namespace</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -144,6 +144,7 @@
     <ClCompile Include="code\exception\invokeMethod_exception.cpp" />
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
+    <ClCompile Include="code\namespace\invokeMethod_namespace.cpp" />
     <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp" />
     <ClCompile Include="code\stdStl\unordered_map_example.cpp" />
     <ClCompile Include="code\stdStl\vector_example.cpp" />
