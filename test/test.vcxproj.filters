@@ -28,6 +28,9 @@
     <Filter Include="code\cast">
       <UniqueIdentifier>{45d92d6a-81fc-4541-8672-d8206d25408a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\exception">
+      <UniqueIdentifier>{1d5420b6-df37-4916-aa89-a2e64826fc27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -57,6 +60,9 @@
     <ClCompile Include="code\stdStl\vector_example.cpp">
       <Filter>code\stdStl</Filter>
     </ClCompile>
+    <ClCompile Include="code\exception\invokeMethod_exception.cpp">
+      <Filter>code\exception</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -73,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="code\stdStl\vector_example.h">
       <Filter>code\stdStl</Filter>
+    </ClInclude>
+    <ClInclude Include="code\exception\bomb.h">
+      <Filter>code\exception</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -6,15 +6,17 @@ void ExecuteTemplateTestCode();
 void ExecuteLamdaTestCode();
 void ExecuteStdStlCode();
 void ExecuteCastTestCode();
+void ExecuteExceptionTestCode();
 
 
 
 int main()
 {
     //ExecuteTemplateTestCode();
-    ExecuteLamdaTestCode();
-    //ExecuteStdStlCode();
+    //ExecuteLamdaTestCode();
+    ExecuteStdStlCode();
     //ExecuteCastTestCode();
+    ExecuteExceptionTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
