@@ -8,17 +8,18 @@ void ExecuteStdStlCode();
 void ExecuteCastTestCode();
 void ExecuteExceptionTestCode();
 void ExecuteNameSpaceTestCode();
-
+void ExecuteThreadsTestCode();
 
 
 int main()
 {
     //ExecuteTemplateTestCode();
     //ExecuteLamdaTestCode();
-    ExecuteStdStlCode();
+    //ExecuteStdStlCode();
     //ExecuteCastTestCode();
-    ExecuteExceptionTestCode();
-    ExecuteNameSpaceTestCode();
+    //ExecuteExceptionTestCode();
+    //ExecuteNameSpaceTestCode();
+    ExecuteThreadsTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

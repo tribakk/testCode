@@ -149,6 +149,7 @@
     <ClCompile Include="code\stdStl\unordered_map_example.cpp" />
     <ClCompile Include="code\stdStl\vector_example.cpp" />
     <ClCompile Include="code\template\invokeMethod_template.cpp" />
+    <ClCompile Include="code\threads\invokeMethod_threads.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>

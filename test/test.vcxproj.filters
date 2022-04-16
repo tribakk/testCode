@@ -34,6 +34,9 @@
     <Filter Include="code\namespace">
       <UniqueIdentifier>{00fd4d15-abb1-46c5-8888-dad1ef2a074a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\threads">
+      <UniqueIdentifier>{fb9e565c-5ac8-46be-8eb0-a85c6e05443f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -68,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="code\namespace\invokeMethod_namespace.cpp">
       <Filter>code\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="code\threads\invokeMethod_threads.cpp">
+      <Filter>code\threads</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
