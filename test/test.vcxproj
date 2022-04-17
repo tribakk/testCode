@@ -145,6 +145,7 @@
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
     <ClCompile Include="code\namespace\invokeMethod_namespace.cpp" />
+    <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp" />
     <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp" />
     <ClCompile Include="code\stdStl\unordered_map_example.cpp" />
     <ClCompile Include="code\stdStl\vector_example.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="code\cast\cast_class01.h" />
     <ClInclude Include="code\exception\bomb.h" />
     <ClInclude Include="code\lambda\testClass.h" />
+    <ClInclude Include="code\smartPointer\testWeak.h" />
     <ClInclude Include="code\stdStl\unordered_map_example.h" />
     <ClInclude Include="code\stdStl\vector_example.h" />
     <ClInclude Include="code\template\example01.h" />

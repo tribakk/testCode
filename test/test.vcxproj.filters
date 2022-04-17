@@ -37,6 +37,9 @@
     <Filter Include="code\threads">
       <UniqueIdentifier>{fb9e565c-5ac8-46be-8eb0-a85c6e05443f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\smartPointer">
+      <UniqueIdentifier>{f462630c-0f01-4044-9a5d-072a00520844}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -75,6 +78,9 @@
     <ClCompile Include="code\threads\invokeMethod_threads.cpp">
       <Filter>code\threads</Filter>
     </ClCompile>
+    <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp">
+      <Filter>code\smartPointer</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -94,6 +100,9 @@
     </ClInclude>
     <ClInclude Include="code\exception\bomb.h">
       <Filter>code\exception</Filter>
+    </ClInclude>
+    <ClInclude Include="code\smartPointer\testWeak.h">
+      <Filter>code\smartPointer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

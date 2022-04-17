@@ -9,6 +9,7 @@ void ExecuteCastTestCode();
 void ExecuteExceptionTestCode();
 void ExecuteNameSpaceTestCode();
 void ExecuteThreadsTestCode();
+void ExecuteSmartPointerCode();
 
 
 int main()
@@ -20,6 +21,7 @@ int main()
     //ExecuteExceptionTestCode();
     //ExecuteNameSpaceTestCode();
     ExecuteThreadsTestCode();
+    //ExecuteSmartPointerCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
