@@ -3,6 +3,7 @@
 #include <mutex>
 #include <vector>
 #include <atomic>
+#include <condition_variable>
 
 namespace threadsNS
 {
@@ -11,6 +12,8 @@ namespace threadsNS
 	void Example03();
 	void Example04();
 	void Example05();
+	void Example06();
+	void Example07();
 }
 
 void ExecuteThreadsTestCode()
@@ -19,7 +22,9 @@ void ExecuteThreadsTestCode()
 	//threadsNS::Example02();
 	//threadsNS::Example03();
 	//threadsNS::Example04();
-	threadsNS::Example05();
+	//threadsNS::Example05();
+	//threadsNS::Example06();
+	threadsNS::Example07();
 
 }
 
@@ -223,5 +228,99 @@ namespace threadsNS
 		std::thread my_thread(f);
 		my_thread.join();
 
+	}
+
+	void Example06()
+	{
+		std::mutex m1;
+		//m1.lock();
+		std::timed_mutex mutex;
+		using sec = std::chrono::seconds;
+		auto f1 = [&]()
+		{
+			mutex.lock();
+			std::this_thread::sleep_for(sec(10));
+			mutex.unlock();
+			//m1.unlock();
+		};
+
+		auto f2 = [&]()
+		{
+			//m1.lock();
+			for (int i = 0; i < 5; i++)
+			if (mutex.try_lock_for(sec(4)))
+			{
+				std::cout << "try" << std::endl;
+				mutex.unlock();
+			}
+			else
+			{
+				std::cout << "no try" << std::endl;
+			}
+		};
+		
+		std::thread t1(f1);
+		std::thread t2(f2);
+
+		t1.join();
+		t2.join();
+
+	}
+
+
+
+	std::mutex m;
+	std::condition_variable cv;
+	std::string data;
+	bool ready = false;
+	bool processed = false;
+
+	void worker_thread()
+	{
+		// Wait until main() sends data
+		std::unique_lock<std::mutex> lk(m);
+		cv.wait(lk, []
+			{
+				return ready;
+			});
+
+		// after the wait, we own the lock.
+		std::cout << "Worker thread is processing data\n";
+		data += " after processing";
+
+		// Send data back to main()
+		processed = true;
+		std::cout << "Worker thread signals data processing completed\n";
+
+		// Manual unlocking is done before notifying, to avoid waking up
+		// the waiting thread only to block again (see notify_one for details)
+		lk.unlock();
+		cv.notify_one();
+	}
+
+	void Example07()
+	{
+		std::thread worker(worker_thread);
+
+		data = "Example data";
+		// send data to the worker thread
+		{
+			std::lock_guard<std::mutex> lk(m);
+			ready = true;
+			std::cout << "main() signals data ready for processing\n";
+		}
+		cv.notify_one();
+
+		// wait for the worker
+		{
+			std::unique_lock<std::mutex> lk(m);
+			cv.wait(lk, []
+				{
+					return processed;
+				});
+		}
+		std::cout << "Back in main(), data = " << data << '\n';
+
+		worker.join();
 	}
 }
