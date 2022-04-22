@@ -40,6 +40,9 @@
     <Filter Include="code\smartPointer">
       <UniqueIdentifier>{f462630c-0f01-4044-9a5d-072a00520844}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\other">
+      <UniqueIdentifier>{87a4e604-a31f-4293-ab38-e6241d1adbfb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -81,6 +84,12 @@
     <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp">
       <Filter>code\smartPointer</Filter>
     </ClCompile>
+    <ClCompile Include="code\other\invokeMethod_other.cpp">
+      <Filter>code\other</Filter>
+    </ClCompile>
+    <ClCompile Include="code\other\testInclude.cpp">
+      <Filter>code\other</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -103,6 +112,12 @@
     </ClInclude>
     <ClInclude Include="code\smartPointer\testWeak.h">
       <Filter>code\smartPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="code\other\testInclude.h">
+      <Filter>code\other</Filter>
+    </ClInclude>
+    <ClInclude Include="code\other\testInclude2.h">
+      <Filter>code\other</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
