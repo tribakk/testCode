@@ -43,6 +43,9 @@
     <Filter Include="code\other">
       <UniqueIdentifier>{87a4e604-a31f-4293-ab38-e6241d1adbfb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\class">
+      <UniqueIdentifier>{84e4482f-4c46-49b7-8df6-7b0d344e26d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -90,6 +93,12 @@
     <ClCompile Include="code\other\testInclude.cpp">
       <Filter>code\other</Filter>
     </ClCompile>
+    <ClCompile Include="code\class\class01.cpp">
+      <Filter>code\class</Filter>
+    </ClCompile>
+    <ClCompile Include="code\class\invokeMethod_class.cpp">
+      <Filter>code\class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -118,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="code\other\testInclude2.h">
       <Filter>code\other</Filter>
+    </ClInclude>
+    <ClInclude Include="code\class\class01.h">
+      <Filter>code\class</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

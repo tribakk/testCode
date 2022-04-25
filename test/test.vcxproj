@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="code\cast\cast_class01.cpp" />
     <ClCompile Include="code\cast\invokeMethod_cast.cpp" />
+    <ClCompile Include="code\class\class01.cpp" />
+    <ClCompile Include="code\class\invokeMethod_class.cpp" />
     <ClCompile Include="code\exception\invokeMethod_exception.cpp" />
     <ClCompile Include="code\lambda\invokeMethod_lambda.cpp" />
     <ClCompile Include="code\lambda\testClass.cpp" />
@@ -157,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\cast\cast_class01.h" />
+    <ClInclude Include="code\class\class01.h" />
     <ClInclude Include="code\exception\bomb.h" />
     <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\other\testInclude.h" />
