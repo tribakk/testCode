@@ -12,6 +12,10 @@ namespace classNS
 	public:
 		simpleClass* p = new simpleClass();
 		int a = 0;
+		TestClass()
+		{
+
+		}
 
 		TestClass(int value)
 		{
@@ -21,7 +25,10 @@ namespace classNS
 		{
 			int a = 10;
 		}
-
+		TestClass(const TestClass&&)
+		{
+			int a = 10;
+		}
 		//TestClass& operator=(TestClass&)
 		//{
 		//	std::cout << "&" << std::endl;
@@ -35,6 +42,16 @@ namespace classNS
 		~TestClass()
 		{
 			delete p;
+		}
+	};
+
+	class TestClass2 : public TestClass
+	{
+	public:
+		int test;
+		TestClass2()
+		{
+			test = 10;
 		}
 	};
 }

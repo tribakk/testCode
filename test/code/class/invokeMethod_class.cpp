@@ -18,10 +18,11 @@ namespace classNS
 		TestClass t1(1);
 		{
 			TestClass t2(2);
-			t1 = std::move(t2);
+			//t1 = std::move(t2);
+			TestClass t3 = std::move(t2);
 		}
 		
-		
+		TestClass2 class2;
 
 		int* a1 = new int();
 		int* a2 = new int();
