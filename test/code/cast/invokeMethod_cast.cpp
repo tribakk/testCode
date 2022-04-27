@@ -55,6 +55,9 @@ namespace castNS
 			printf("static_cast cCast1_2\r\n");
 		}
 
+		cCast0_1* cast01 = new cCast0_1();
+		cCast0_2* cast02 = static_cast<cCast0_2>(cast01);
+
 		cCast1* cast1 = new cCast1_1();
 		if (dynamic_cast<cCast1_1*>(cast1))
 		{
@@ -83,10 +86,13 @@ namespace castNS
 	void Example02()
 	{
 		cCast1_1 cast1_1;
+		cCast1_1& cast1_11 = cast1_1;
 		cast1_1.a1 = 1231231;
 		cCast1& cast1 = cast1_1;
 		cCast1_1 cast2 = dynamic_cast<cCast1_1&>(cast1_1);
 		cast1_1.a1 = 10;
-		cCast1_2 cast2_ = dynamic_cast<cCast1_2&>(cast1);
+
+		//свалиться AV, тут пытается именно сконструироваться новый объект
+		//cCast1_2 cast2_ = dynamic_cast<cCast1_2&>(cast1);
 	}
 }

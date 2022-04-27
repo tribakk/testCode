@@ -1,4 +1,5 @@
 ﻿//◦
+#include <iostream>
 #pragma once
 namespace castNS
 {
@@ -38,6 +39,19 @@ namespace castNS
 		virtual void test()
 		{
 
+		}
+		cCast1_1()
+		{
+			std::cout << "cCast1_1" << std::endl;
+		}
+		cCast1_1& operator=(const cCast1_1& cast)
+		{
+			return *this;
+		}
+
+		cCast1_1(const cCast1_1& cast)
+		{
+			int a = 10;
 		}
 	};
 
