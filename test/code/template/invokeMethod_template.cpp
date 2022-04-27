@@ -1,6 +1,7 @@
 #include "example01.h"
 #include "example02.h"
 #include <iostream>
+//©
 
 namespace templateNS
 {
