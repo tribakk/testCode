@@ -1,7 +1,7 @@
 #include "cast_class01.h"
 #include <functional>
 #include <iostream>
-
+//©
 namespace castNS
 {
 	void Example01();
