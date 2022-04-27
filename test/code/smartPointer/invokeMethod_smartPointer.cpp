@@ -7,13 +7,15 @@ namespace smartPointerNS
     void Example01();
     void Example02();
     void Example03();
+    void Example04();
 }
 
 void ExecuteSmartPointerCode()
 {
 	//smartPointerNS::Example01();
     //smartPointerNS::Example02();
-    smartPointerNS::Example03();
+    //smartPointerNS::Example03();
+    smartPointerNS::Example04();
 }
 
 namespace smartPointerNS
@@ -95,6 +97,7 @@ namespace smartPointerNS
         }
     }
 
+
     void Example03()
     {
         std::shared_ptr<testWeak1> pWeak1 = std::make_shared<testWeak1>();
@@ -104,5 +107,17 @@ namespace smartPointerNS
         weak2.print();
     }
 
+    std::unique_ptr<testA> CreateA()
+    {
+        std::unique_ptr<testA> a(new testA());
+        return a;
+    }
+
+    void Example04()
+    {
+        std::unique_ptr<testA> aa = CreateA();
+        std::shared_ptr<testA> a = std::move(aa);
+
+    }
     
 }
