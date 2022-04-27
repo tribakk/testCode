@@ -131,5 +131,8 @@
     <ClInclude Include="code\class\class01.h">
       <Filter>code\class</Filter>
     </ClInclude>
+    <ClInclude Include="code\template\example02.h">
+      <Filter>code\template</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

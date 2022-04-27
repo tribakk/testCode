@@ -18,13 +18,14 @@ int main()
     //ExecuteTemplateTestCode();
     //ExecuteLamdaTestCode();
     //ExecuteStdStlCode();
-    //ExecuteCastTestCode();
-    //ExecuteExceptionTestCode();
+    ExecuteCastTestCode();
     //ExecuteNameSpaceTestCode();
     //ExecuteThreadsTestCode();
     //ExecuteSmartPointerCode();
     //ExecuteClassTestCode();
-    ExecuteOtherTestCode();
+    //ExecuteOtherTestCode();
+
+    ExecuteExceptionTestCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
