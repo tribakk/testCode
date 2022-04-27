@@ -1,7 +1,7 @@
-#include "cast_class01.h"
+п»ї#include "cast_class01.h"
 #include <functional>
 #include <iostream>
-//©
+//рџЋ
 namespace castNS
 {
 	void Example01();
@@ -20,7 +20,7 @@ namespace castNS
 	{
 		cCast0* cast0 = new cCast0();
 
-		//dynamic_cast не компилиться если в классах нет виртуальных функций
+		//dynamic_cast РЅРµ РєРѕРјРїРёР»РёС‚СЊСЃСЏ РµСЃР»Рё РІ РєР»Р°СЃСЃР°С… РЅРµС‚ РІРёСЂС‚СѓР°Р»СЊРЅС‹С… С„СѓРЅРєС†РёР№
 		//
 		/*
 			error C2683: 'dynamic_cast': 'castNS::cCast0' is not a polymorphic type
@@ -42,14 +42,14 @@ namespace castNS
 
 		if (cCast0_1* cast01 = static_cast<cCast0_1*>(cast0))
 		{
-			//это по факту cCast0 поэтому будет мусор
+			//СЌС‚Рѕ РїРѕ С„Р°РєС‚Сѓ cCast0 РїРѕСЌС‚РѕРјСѓ Р±СѓРґРµС‚ РјСѓСЃРѕСЂ
 			std::cout << cast01->a1 << std::endl;
 			printf("static_cast cCast0_1\r\n");
 		}
 
 		if (cCast0_2* cast02 = static_cast<cCast0_2*>(cast0))
 		{
-			//это по факту cCast0 поэтому будет мусор
+			//СЌС‚Рѕ РїРѕ С„Р°РєС‚Сѓ cCast0 РїРѕСЌС‚РѕРјСѓ Р±СѓРґРµС‚ РјСѓСЃРѕСЂ
 			std::cout << cast02->a2 << std::endl;
 			printf("static_cast cCast1_2\r\n");
 		}
@@ -60,7 +60,7 @@ namespace castNS
 			printf("dynamic_cast cCast1_1\r\n");
 		}
 
-		//каст не пройдет, не выведется
+		//РєР°СЃС‚ РЅРµ РїСЂРѕР№РґРµС‚, РЅРµ РІС‹РІРµРґРµС‚СЃСЏ
 		if (dynamic_cast<cCast1_2*>(cast1))
 		{
 			printf("dynamic_cast cCast1_2\r\n");
