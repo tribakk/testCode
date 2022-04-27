@@ -1,3 +1,4 @@
+﻿//◦
 #include "unordered_map_example.h"
 
 bool std::equal_to<stdStlNS::testStruct1>::operator()(const stdStlNS::testStruct1& lhs, const stdStlNS::testStruct1& rhs) const

@@ -1,3 +1,4 @@
+﻿//◦
 #include "testClass.h"
 
 namespace lambdaNS

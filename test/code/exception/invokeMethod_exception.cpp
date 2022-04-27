@@ -1,3 +1,4 @@
+﻿//◦
 #include "bomb.h"
 
 namespace exceptionNS

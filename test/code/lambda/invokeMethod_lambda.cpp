@@ -1,3 +1,4 @@
+﻿//◦
 #include "testClass.h"
 #include <iostream>
 
