@@ -1,15 +1,18 @@
 #include "testClass.h"
+#include <iostream>
 
 namespace lambdaNS
 {
 	void Example01();
 	void Example02();
+	void Example03();
 }
 
 void ExecuteLamdaTestCode()
 {
-	lambdaNS::Example01();
-	lambdaNS::Example02();
+	//lambdaNS::Example01();
+	//lambdaNS::Example02();
+	lambdaNS::Example03();
 }
 
 namespace lambdaNS
@@ -48,5 +51,21 @@ namespace lambdaNS
 				return a1 + a2;
 				//return "asdf";
 			});
+	}
+
+
+	void print3(std::function <void()> f)
+	{
+		f();
+	}
+
+	void Example03()
+	{
+		auto func = []()
+		{
+			std::cout << "03"<< std::endl;
+		};
+
+		print3(func);
 	}
 }
