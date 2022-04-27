@@ -7,13 +7,15 @@ namespace lambdaNS
 	void Example01();
 	void Example02();
 	void Example03();
+	void Example04();
 }
 
 void ExecuteLamdaTestCode()
 {
 	//lambdaNS::Example01();
 	//lambdaNS::Example02();
-	lambdaNS::Example03();
+	//lambdaNS::Example03();
+	lambdaNS::Example04();
 }
 
 namespace lambdaNS
@@ -62,11 +64,29 @@ namespace lambdaNS
 
 	void Example03()
 	{
-		auto func = []()
+		auto func = []() -> void
 		{
 			std::cout << "03"<< std::endl;
 		};
 
 		print3(func);
+	}
+
+	void Example04()
+	{
+		auto func = [](int i, auto f) -> void
+		{
+			i++;
+			if (i < 10)
+			{
+				std::cout << i << std::endl;
+				f(i, f);
+			}
+		};
+		
+
+		func(0, func);
+		//ExecuteFunction(func);
+		
 	}
 }
