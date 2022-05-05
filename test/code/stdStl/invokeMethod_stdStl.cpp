@@ -6,11 +6,13 @@ namespace stdStlNS
 {
     void Example01();
     void Example02();
+    void Example03();
+    void Example04();
 }
 
 void ExecuteStdStlCode()
 {
-    stdStlNS::Example02();
+    stdStlNS::Example04();
 }
 
 namespace stdStlNS
@@ -74,5 +76,15 @@ namespace stdStlNS
             iter->testA = 2;
             iter->testB = 1;
         }
+    }
+
+    void Example04()
+    {
+        std::list<int> _list;
+        _list.push_front(10);
+        _list.push_front(11);
+        auto iter = _list.begin();
+        _list.push_front(12);
+        _list.erase(iter);
     }
 }
