@@ -1,6 +1,7 @@
 ﻿//◦
 #include "unordered_map_example.h"
 #include "vector_example.h"
+#include <iostream>
 
 namespace stdStlNS
 {
@@ -8,11 +9,14 @@ namespace stdStlNS
     void Example02();
     void Example03();
     void Example04();
+    void Example05();
+    void Example06();
 }
 
 void ExecuteStdStlCode()
 {
-    stdStlNS::Example04();
+    stdStlNS::Example05();
+    stdStlNS::Example06();
 }
 
 namespace stdStlNS
@@ -86,5 +90,65 @@ namespace stdStlNS
         auto iter = _list.begin();
         _list.push_front(12);
         _list.erase(iter);
+    }
+
+    void Example05()
+    {
+        std::vector<int> vec = {1,23,32,22,11,99,23};
+        std::cout << typeid(std::begin(vec)).name() << std::endl;
+        std::cout << typeid(vec.begin()).name() << std::endl;
+        for (auto iter = std::begin(vec); iter != std::end(vec); iter++)
+        {
+            std::cout << *iter << " " ;
+        }
+        std::cout << std::endl;
+
+
+
+        std::list<int> intList = {11,02,33,24,5'555};
+        std::cout << typeid(std::begin(intList)).name() << std::endl;
+        std::cout << typeid(intList.begin()).name() << std::endl;
+        for (auto iter = std::begin(intList); iter != std::end(intList); iter++)
+        {
+            std::cout << *iter << " ";
+        }
+        std::cout << std::endl;
+
+        std::unordered_map<int, int> intUnMap = {{3,15}, {10,37}, {1,92}, {2,10}, {2,17}};
+        std::cout << typeid(std::begin(intUnMap)).name() << std::endl;
+        std::cout << typeid(intUnMap.begin()).name() << std::endl;
+        for (auto iter = std::begin(intUnMap); iter != std::end(intUnMap); iter++)
+        {
+            std::cout << iter->first << " " << iter->second << " | ";
+        }
+        std::cout << std::endl;
+    }
+
+    class testA
+    {
+        int a;
+    public:
+        testA(int a0)
+        {
+            a = a0;
+            std::cout <<" testA : " << a << std::endl;
+        }
+        ~testA()
+        {
+            std::cout << "~testA : " << a << std::endl;
+        }
+        testA(const testA& tA)
+        {
+            a = tA.a;
+            std::cout << "copy testA : " << a << std::endl;
+        }
+
+    };
+
+    void Example06()
+    {
+        std::vector<testA> vec = {testA(1), testA(2), testA(10)};
+        vec.~vector();
+        std::unordered_map<int, testA> unMap{{1, testA(10)}, {2, testA(20)}, {3, testA(30)}, {3, testA(33)}};
     }
 }
