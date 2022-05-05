@@ -9,12 +9,13 @@
 namespace otherNS
 {
 	void Example01();
+	void Example02();
 }
 
 void ExecuteOtherTestCode()
 {
-	otherNS::Example01();
-
+	//otherNS::Example01();
+	otherNS::Example02();
 }
 
 namespace otherNS
@@ -44,5 +45,47 @@ namespace otherNS
 		test(0);
 	}
 
+	int counter = 0;
+	class testA
+	{
+		int a;
+	public:
+		//static int counter;
+		testA()
+		{
+			counter++;
+			a = counter;
+			std::cout << " testA : " << a << std::endl;
+		}
+		~testA()
+		{
+			std::cout << "~testA : " << a << std::endl;
+		}
+	};
+	
+	
+	void Example02()
+	{
+		
+		//testA::counter = 0;
+		std::cout << " 1 " << std::endl;
+		testA* pA_one = new testA();
+		delete pA_one;
+		std::cout << " 2 " << std::endl;
+		
+		//2 варианта
+		// 1ый вариант, если убрать вывод значения переменной a, то будет бесконечно выводиться
+		// 2ой вариант, уже с выводом переменной a, то при вызове диструктора свалиться
+		// видимо удаляться будет какой-то случайный кусок памяти
+		//в диструкторе this будет не равно значению pA_one
+		//pA_one = new testA();
+		//delete[] pA_one;
+		
+		std::cout << " 3 " << std::endl;
+		const int size_collection = 20;
+		testA* pA_many = new testA[size_collection];
+		//delete pA_many; //удалить только 1ый элемент массива и отладчик сругается
+		delete[] pA_many; //удаляет в обратной последовательности
+	}
 
 }
