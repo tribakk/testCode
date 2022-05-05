@@ -137,5 +137,8 @@
     <ClInclude Include="code\class\class_virtual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="code\threads\ThreadQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

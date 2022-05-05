@@ -5,6 +5,8 @@
 #include <vector>
 #include <atomic>
 #include <condition_variable>
+#include <future>
+#include "ThreadQueue.h"
 
 namespace threadsNS
 {
@@ -15,6 +17,8 @@ namespace threadsNS
 	void Example05();
 	void Example06();
 	void Example07();
+	void Example08();
+	void ExampleQueue();
 }
 
 void ExecuteThreadsTestCode()
@@ -25,12 +29,17 @@ void ExecuteThreadsTestCode()
 	//threadsNS::Example04();
 	//threadsNS::Example05();
 	//threadsNS::Example06();
-	threadsNS::Example07();
+	//threadsNS::Example07();
+	//threadsNS::ExampleQueue();
+	threadsNS::Example08();
 
 }
 
 namespace threadsNS
 {
+
+
+
 	std::mutex mut;
 	void test(bool bMutex)
 	{
@@ -323,5 +332,64 @@ namespace threadsNS
 		std::cout << "Back in main(), data = " << data << '\n';
 
 		worker.join();
+	}
+
+
+	
+	void printAlone(std::string text)
+	{
+		static std::mutex printLock;
+		std::lock_guard<std::mutex> l(printLock);
+		std::cout << text << std::endl;
+
+	}
+
+	void printAlone(std::string text, int value)
+	{
+		static std::mutex printLock;
+		std::lock_guard<std::mutex> l(printLock);
+		std::cout << text << " : "<< value << std::endl;
+
+	}
+
+	void prom_sum(int a, int b, int counter, std::promise<int> prom)
+	{
+		int result = a + b;
+		printAlone("create", counter);
+		//std::cout << "start wait sum" << std::endl;
+		//std::cout << "end wait sum" << std::endl;
+		prom.set_value(result);
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+		printAlone("1111 was set_value", counter);
+	}
+
+	void Example08()
+	{
+		
+		for (int i = 0; i < 10; i++)
+		{
+			std::promise<int> prom;
+			std::future<int> fut = prom.get_future();
+		
+			std::thread th(prom_sum, 10, 20, i, std::move(prom));
+			//std::cout << "start wait get" << std::endl;
+			int result = fut.get();
+		
+			//return;
+			printAlone("2222 end wait get");
+			//std::cout << "result = " << result << std::endl;
+			printAlone("");
+			th.detach();
+
+
+		}
+		std::this_thread::sleep_for(std::chrono::seconds(5));
+
+	}
+
+
+	void ExampleQueue()
+	{
+
 	}
 }

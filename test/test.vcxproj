@@ -170,6 +170,7 @@
     <ClInclude Include="code\stdStl\vector_example.h" />
     <ClInclude Include="code\template\example01.h" />
     <ClInclude Include="code\template\example02.h" />
+    <ClInclude Include="code\threads\ThreadQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
