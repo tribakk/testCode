@@ -56,7 +56,7 @@ namespace castNS
 		}
 
 		cCast0_1* cast01 = new cCast0_1();
-		cCast0_2* cast02 = static_cast<cCast0_2>(cast01);
+		//cCast0_2* cast02 = static_cast<cCast0_2>(cast01);
 
 		cCast1* cast1 = new cCast1_1();
 		if (dynamic_cast<cCast1_1*>(cast1))
