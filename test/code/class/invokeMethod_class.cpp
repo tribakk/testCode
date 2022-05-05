@@ -1,15 +1,17 @@
 ﻿//◦
 #include "class01.h"
+#include "class_virtual.h"
 #include <utility>
 
 namespace classNS
 {
 	void Example01();
+	void Example02();
 }
 
 void ExecuteClassTestCode()
 {
-	classNS::Example01();
+	classNS::Example02();
 }
 
 namespace classNS
@@ -28,5 +30,14 @@ namespace classNS
 		int* a1 = new int();
 		int* a2 = new int();
 		a2 = std::move(a1);
+	}
+
+	void Example02()
+	{
+		childA* cA = new childA();
+		parrentA* pA = cA;
+		pA->print();
+		cA->print();
+		cA->~childA();
 	}
 }

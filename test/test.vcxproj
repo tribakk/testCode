@@ -160,6 +160,7 @@
   <ItemGroup>
     <ClInclude Include="code\cast\cast_class01.h" />
     <ClInclude Include="code\class\class01.h" />
+    <ClInclude Include="code\class\class_virtual.h" />
     <ClInclude Include="code\exception\bomb.h" />
     <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\other\testInclude.h" />
