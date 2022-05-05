@@ -4,6 +4,10 @@
 
 /.vs/test/v16
 /Debug
+/Release
 /test/Debug
+/test/Release
 /test/x64/Debug
+/test/x64/Release
 /x64/Debug
+/x64/Release
