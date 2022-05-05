@@ -119,6 +119,10 @@ namespace smartPointerNS
         std::unique_ptr<testA> aa = CreateA();
         std::shared_ptr<testA> a = std::move(aa);
 
+
+        std::unique_ptr<testA> a2;
+        std::unique_ptr<testA> a3;
+        a3 = std::move(a2);
     }
     
 }
