@@ -84,9 +84,6 @@
     <ClCompile Include="code\threads\invokeMethod_threads.cpp">
       <Filter>code\threads</Filter>
     </ClCompile>
-    <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp">
-      <Filter>code\smartPointer</Filter>
-    </ClCompile>
     <ClCompile Include="code\other\invokeMethod_other.cpp">
       <Filter>code\other</Filter>
     </ClCompile>
@@ -98,6 +95,9 @@
     </ClCompile>
     <ClCompile Include="code\class\invokeMethod_class.cpp">
       <Filter>code\class</Filter>
+    </ClCompile>
+    <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp">
+      <Filter>code\smartPointer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +139,12 @@
     </ClInclude>
     <ClInclude Include="code\threads\ThreadQueue.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enableSharedFromThis.h">
+      <Filter>code\smartPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="code\smartPointer\testDeleter.h">
+      <Filter>code\smartPointer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

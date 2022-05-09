@@ -17,11 +17,11 @@ int main()
 {
     //ExecuteTemplateTestCode();
     //ExecuteLamdaTestCode();
-    ExecuteStdStlCode();
+    //ExecuteStdStlCode();
     //ExecuteCastTestCode();
     //ExecuteNameSpaceTestCode();
     //ExecuteThreadsTestCode();
-    //ExecuteSmartPointerCode();
+    ExecuteSmartPointerCode();
     //ExecuteClassTestCode();
     //ExecuteOtherTestCode();
 

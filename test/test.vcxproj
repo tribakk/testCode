@@ -165,12 +165,14 @@
     <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\other\testInclude.h" />
     <ClInclude Include="code\other\testInclude2.h" />
+    <ClInclude Include="code\smartPointer\testDeleter.h" />
     <ClInclude Include="code\smartPointer\testWeak.h" />
     <ClInclude Include="code\stdStl\unordered_map_example.h" />
     <ClInclude Include="code\stdStl\vector_example.h" />
     <ClInclude Include="code\template\example01.h" />
     <ClInclude Include="code\template\example02.h" />
     <ClInclude Include="code\threads\ThreadQueue.h" />
+    <ClInclude Include="enableSharedFromThis.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
