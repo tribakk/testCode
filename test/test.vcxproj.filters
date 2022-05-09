@@ -46,6 +46,9 @@
     <Filter Include="code\class">
       <UniqueIdentifier>{84e4482f-4c46-49b7-8df6-7b0d344e26d6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{292aed44-c256-4031-95e9-c6a2fe3de284}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -145,6 +148,12 @@
     </ClInclude>
     <ClInclude Include="code\smartPointer\testDeleter.h">
       <Filter>code\smartPointer</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\processInfo.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\memoryWriter.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
