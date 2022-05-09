@@ -165,6 +165,7 @@
     <ClInclude Include="code\lambda\testClass.h" />
     <ClInclude Include="code\other\testInclude.h" />
     <ClInclude Include="code\other\testInclude2.h" />
+    <ClInclude Include="code\smartPointer\enableSharedFromThis.h" />
     <ClInclude Include="code\smartPointer\testDeleter.h" />
     <ClInclude Include="code\smartPointer\testWeak.h" />
     <ClInclude Include="code\stdStl\unordered_map_example.h" />
@@ -172,7 +173,6 @@
     <ClInclude Include="code\template\example01.h" />
     <ClInclude Include="code\template\example02.h" />
     <ClInclude Include="code\threads\ThreadQueue.h" />
-    <ClInclude Include="enableSharedFromThis.h" />
     <ClInclude Include="utils\memoryWriter.h" />
     <ClInclude Include="utils\processInfo.h" />
   </ItemGroup>

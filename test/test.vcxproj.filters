@@ -143,9 +143,6 @@
     <ClInclude Include="code\threads\ThreadQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="enableSharedFromThis.h">
-      <Filter>code\smartPointer</Filter>
-    </ClInclude>
     <ClInclude Include="code\smartPointer\testDeleter.h">
       <Filter>code\smartPointer</Filter>
     </ClInclude>
@@ -154,6 +151,9 @@
     </ClInclude>
     <ClInclude Include="utils\memoryWriter.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="code\smartPointer\enableSharedFromThis.h">
+      <Filter>code\smartPointer</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
