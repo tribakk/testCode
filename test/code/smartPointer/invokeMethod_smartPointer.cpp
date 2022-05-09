@@ -5,6 +5,10 @@
 #include "testWeak.h"
 #include "enableSharedFromThis.h"
 #include "testDeleter.h"
+#include "../../utils/memoryWriter.h"
+
+
+
 
 namespace smartPointerNS
 {
@@ -15,6 +19,7 @@ namespace smartPointerNS
     void Example05();
     void Example06();
     void Example07();
+    void Example08();
 }
 
 void ExecuteSmartPointerCode()
@@ -23,7 +28,8 @@ void ExecuteSmartPointerCode()
     //smartPointerNS::Example02();
     //smartPointerNS::Example03();
     //smartPointerNS::Example06();
-    smartPointerNS::Example07();
+    //smartPointerNS::Example07();
+    smartPointerNS::Example08();
 }
 
 namespace smartPointerNS
@@ -214,5 +220,57 @@ namespace smartPointerNS
                 });
         }
         std::cout << "end 5" << std::endl;
+    }
+
+    class VeryBigClass
+    {
+        int* bigMemory;
+    public:
+        VeryBigClass()
+        {
+            bigMemory = new int[1'000'000];
+            std::cout << "veryBigClass" << std::endl;
+        }
+        ~VeryBigClass()
+        {
+            delete[] bigMemory;
+            std::cout << "~veryBigClass" << std::endl;
+        }
+    };
+
+    void Example08()
+    {
+        /*
+        * эксперимент был расчитан, что в случае с make_shared
+        * память почиститься только после освобождения последнего weak_ptr
+        * так должно быть по Маерсу
+        * однако чистить сразу после после освобождения последнего shared_ptr
+        */
+        utils::GetCurrentSize(); //прогрузим либы
+        utils::MemoryWriter mem;
+        std::cout << "1" << std::endl;
+        {
+            mem.start();
+            std::shared_ptr<VeryBigClass> pShared(new VeryBigClass());
+            mem.WriteDeltaMemory("after create by new");
+            std::weak_ptr<VeryBigClass> pWeak = pShared;
+            pShared.reset();
+            mem.WriteDeltaMemory("after shared reset");
+            pWeak.reset();
+            mem.WriteDeltaMemory("after weak reset");
+
+        }
+        std::cout << "2" << std::endl;
+        {
+            mem.start();
+            std::shared_ptr<VeryBigClass> pShared = std::make_shared<VeryBigClass>();
+            mem.WriteDeltaMemory("after create by new");
+            std::weak_ptr<VeryBigClass> pWeak = pShared;
+            pShared.reset();
+            mem.WriteDeltaMemory("after shared reset");
+            pWeak.reset();
+            mem.WriteDeltaMemory("after weak reset");
+        }
+
     }
 }
