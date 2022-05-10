@@ -10,7 +10,7 @@ namespace RLValueNS
 {
     void Example01();
     void Example02();
-    //void Example03();
+    void Example03();
     //void Example04();
     //void Example05();
     //void Example06();
@@ -22,7 +22,8 @@ namespace RLValueNS
 void ExecuteRLValueNSCode()
 {
     //RLValueNS::Example01();
-    RLValueNS::Example02();
+    //RLValueNS::Example02();
+    RLValueNS::Example03();
 }
 
 namespace RLValueNS
@@ -34,7 +35,6 @@ namespace RLValueNS
     
     void testPrint(const cRule5Int& a)
     {
-
         std::cout << "const ref: " << a.a << std::endl;
     }
 
@@ -67,11 +67,15 @@ namespace RLValueNS
     {
         cRule5Int a(10);
         testBeforePrint(a);
+        testPrint(a);
         printNewString();
 
         testBeforePrint(std::move(a));
+        testPrint(std::move(a));
         printNewString();
+
         testBeforePrint(cRule5Int(20));
+        testPrint(cRule5Int(20));
         printNewString();
 
         //не может скомпилировать
@@ -127,6 +131,38 @@ namespace RLValueNS
         cRule5Int b4(400);
         testPrint(std::forward<cRule5Int>(b4));
         testPrint(b4);
+        printNewString();
+    }
+
+    void logStrings(const cRule5Str& str5)
+    {
+        std::cout << "const ref: " << str5.m_str << std::endl;
+    }
+
+    void logStrings(cRule5Str&& str5)
+    {
+        std::cout << "move: " << str5.m_str << std::endl;
+    }
+
+    void Example03()
+    {
+        cRule5Str str5_1("test1");
+        logStrings(str5_1);
+        printNewString();
+
+        logStrings(std::string("test2"));
+        printNewString();
+        logStrings(cRule5Str("test3"));
+        printNewString();
+
+        logStrings(std::move(str5_1));
+        printNewString();
+
+        cRule5Str&& str5_2(std::string("test2"));
+        logStrings(str5_2);
+        printNewString();
+
+        logStrings(std::move(str5_2));
         printNewString();
     }
 }
