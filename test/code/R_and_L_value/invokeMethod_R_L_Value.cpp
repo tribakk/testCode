@@ -2,6 +2,9 @@
 #include <string>
 #include <iostream>
 #include <memory>
+#include "../../utils/class/class5.h"
+
+using namespace utils;
 
 namespace RLValueNS
 {
@@ -28,52 +31,14 @@ namespace RLValueNS
     {
         std::cout << std::endl;
     }
-    class testA
-    {
-    public:
-        int a;
-    public:
-        testA(int A) noexcept
-        {
-            a = A;
-            std::cout << "testAA " << a << std::endl;
-        }
-        ~testA() noexcept
-        {
-
-            std::cout << "~testAA " << a << std::endl;
-        }
-        testA(const testA& copyA) noexcept
-        {
-            a = copyA.a;
-            std::cout << "simple copy testA" << a << std::endl;
-        }
-        testA& operator=(const testA copyA) noexcept
-        {
-            a = copyA.a;
-            std::cout << "simple operator= testA" << a << std::endl;
-            return *this;
-        }
-        testA(testA&& moveA) noexcept
-        {
-            a = moveA.a;
-            moveA.a = 0;
-            std::cout << "move Constructor testA" << a << std::endl;
-        }
-        testA& operator=(testA&& moveA) noexcept
-        {
-            a = moveA.a;
-            std::cout << "move operator= testA" << a << std::endl;
-            return *this;
-        }
-    };
-    void testPrint(const testA& a)
+    
+    void testPrint(const cRule5Int& a)
     {
 
         std::cout << "const ref: " << a.a << std::endl;
     }
 
-    void testPrint(testA&& a)
+    void testPrint(cRule5Int&& a)
     {
         std::cout << "move: " << a.a << std::endl;
     }
@@ -100,13 +65,13 @@ namespace RLValueNS
 
     void Example01()
     {
-        testA a(10);
+        cRule5Int a(10);
         testBeforePrint(a);
         printNewString();
 
         testBeforePrint(std::move(a));
         printNewString();
-        testBeforePrint(testA(20));
+        testBeforePrint(cRule5Int(20));
         printNewString();
 
         //не может скомпилировать
@@ -114,52 +79,53 @@ namespace RLValueNS
         //std::unique_ptr<testA> uniqueA = std::make_unique<testA>(20);
         //testBeforePrint(uniqueA);
 
-        testA b = std::move(a);
+        cRule5Int b = std::move(a);
         testBeforePrint(b);
         testBeforePrint(std::move(b));
 
     }
 
-    testA createA(int value)
+    cRule5Int createA(int value)
     {
-        return testA(value);
+        return cRule5Int(value);
     }
 
-    void testPrint2(testA&& a)
+    void testPrint2(cRule5Int&& a)
     {
         std::cout << "move: " << a.a << std::endl;
     }
 
     void Example02()
     {
-        testA a(10);
+        cRule5Int a(10);
         testPrint(a);
         printNewString();
         testPrint(std::move(a));
         printNewString();
-        testPrint(std::forward<testA>(a)); //почему-то move
+        testPrint(std::forward<cRule5Int>(a)); //почему-то move
         printNewString();
-        testPrint(testA(30));
+        testPrint(cRule5Int(30));
         printNewString();
 
-        testA&& b1 = createA(100);
-        testPrint(std::forward<testA>(b1));
+        cRule5Int&& b1 = createA(100);
+        testPrint(std::forward<cRule5Int>(b1));
         testPrint(b1);
         std::cout << typeid(b1).name() << std::endl;
         printNewString();
 
-        testA&& b2 = testA(200);
-        testPrint(std::forward<testA>(b2));
+        cRule5Int&& b2 = cRule5Int(200);
+        testPrint(std::forward<cRule5Int>(b2));
         testPrint(b2);
         printNewString();
 
-        testA&& b3(300);
-        testPrint(std::forward<testA>(b3));
-        testPrint(b3);
+        cRule5Int&& b3(300);
+        cRule5Int&& b33(300);
+        //testPrint(std::forward<testA>(b3));
+        //testPrint(b3);
         printNewString();
 
-        testA b4(400);
-        testPrint(std::forward<testA>(b4));
+        cRule5Int b4(400);
+        testPrint(std::forward<cRule5Int>(b4));
         testPrint(b4);
         printNewString();
     }
