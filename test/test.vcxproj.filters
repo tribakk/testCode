@@ -49,6 +49,9 @@
     <Filter Include="utils">
       <UniqueIdentifier>{292aed44-c256-4031-95e9-c6a2fe3de284}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\R and L - value">
+      <UniqueIdentifier>{e2340bc7-6be4-4267-a855-374244341bc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp">
       <Filter>code\smartPointer</Filter>
+    </ClCompile>
+    <ClCompile Include="code\R_and_L_value\invokeMethod_R_L_Value.cpp">
+      <Filter>code\R and L - value</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

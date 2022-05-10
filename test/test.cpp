@@ -12,6 +12,7 @@ void ExecuteThreadsTestCode();
 void ExecuteSmartPointerCode();
 void ExecuteClassTestCode();
 void ExecuteOtherTestCode();
+void ExecuteRLValueNSCode();
 
 int main()
 {
@@ -21,10 +22,10 @@ int main()
     //ExecuteCastTestCode();
     //ExecuteNameSpaceTestCode();
     //ExecuteThreadsTestCode();
-    ExecuteSmartPointerCode();
+    //ExecuteSmartPointerCode();
     //ExecuteClassTestCode();
     //ExecuteOtherTestCode();
-
+    ExecuteRLValueNSCode();
     //ExecuteExceptionTestCode();
 }
 

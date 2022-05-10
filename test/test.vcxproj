@@ -149,6 +149,7 @@
     <ClCompile Include="code\namespace\invokeMethod_namespace.cpp" />
     <ClCompile Include="code\other\invokeMethod_other.cpp" />
     <ClCompile Include="code\other\testInclude.cpp" />
+    <ClCompile Include="code\R_and_L_value\invokeMethod_R_L_Value.cpp" />
     <ClCompile Include="code\smartPointer\invokeMethod_smartPointer.cpp" />
     <ClCompile Include="code\stdStl\invokeMethod_stdStl.cpp" />
     <ClCompile Include="code\stdStl\unordered_map_example.cpp" />
