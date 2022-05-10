@@ -20,6 +20,7 @@ namespace smartPointerNS
     void Example06();
     void Example07();
     void Example08();
+    void Example09();
 }
 
 void ExecuteSmartPointerCode()
@@ -29,7 +30,8 @@ void ExecuteSmartPointerCode()
     //smartPointerNS::Example03();
     //smartPointerNS::Example06();
     //smartPointerNS::Example07();
-    smartPointerNS::Example08();
+    //smartPointerNS::Example08();
+    smartPointerNS::Example09();
 }
 
 namespace smartPointerNS
@@ -272,5 +274,47 @@ namespace smartPointerNS
             mem.WriteDeltaMemory("after weak reset");
         }
 
+    }
+
+    class testAA
+    {
+        int a;
+    public:
+        testAA(int A, bool bExeption)
+        {
+            a = A;
+            std::cout << "testAA " << a << std::endl;
+            if (bExeption)
+                throw std::exception();
+        }
+        ~testAA()
+        {
+            
+            std::cout << "~testAA " << a << std::endl;
+        }
+    };
+
+    class testBB
+    {
+        std::unique_ptr<testAA> uniq1;
+        std::unique_ptr<testAA> uniq2;
+    public:
+        testBB(testAA* pA1, testAA* pA2)
+        {
+            uniq1.reset(pA1);
+            uniq2.reset(pA2);
+        }
+    };
+
+    void Example09()
+    {
+        try
+        {
+            testBB b(new testAA(10, false), new testAA(20, true));
+        }
+        catch (...)
+        {
+
+        }
     }
 }
