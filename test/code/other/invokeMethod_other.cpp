@@ -10,12 +10,14 @@ namespace otherNS
 {
 	void Example01();
 	void Example02();
+	void Example03();
 }
 
 void ExecuteOtherTestCode()
 {
 	//otherNS::Example01();
-	otherNS::Example02();
+	//otherNS::Example02();
+	otherNS::Example03();
 }
 
 namespace otherNS
@@ -86,6 +88,21 @@ namespace otherNS
 		testA* pA_many = new testA[size_collection];
 		//delete pA_many; //удалить только 1ый элемент массива и отладчик сругается
 		delete[] pA_many; //удаляет в обратной последовательности
+	}
+
+	void Example03()
+	{
+		const int* a = new int(10);
+		a = new int(20);
+		//*a = 30;
+
+		int* const b = new int(100);
+		//b = new int(110);
+		*b = 120;
+
+		const char name[] = "test";
+		auto& test = name;
+		//test[1] = 'dasf';
 	}
 
 }
