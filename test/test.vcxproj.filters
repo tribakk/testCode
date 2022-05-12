@@ -55,6 +55,9 @@
     <Filter Include="utils\class">
       <UniqueIdentifier>{d9b97c5f-fb36-4f85-b379-95a2860c9d5d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="code\paramType">
+      <UniqueIdentifier>{74d658ee-9deb-42e1-808f-c2c88ffb29c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -111,6 +114,9 @@
     <ClCompile Include="code\R_and_L_value\invokeMethod_R_L_Value.cpp">
       <Filter>code\R and L - value</Filter>
     </ClCompile>
+    <ClCompile Include="code\ParamType\invokeMethod_ParamType.cpp">
+      <Filter>code\paramType</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\template\example01.h">
@@ -166,6 +172,9 @@
     </ClInclude>
     <ClInclude Include="utils\class\class5.h">
       <Filter>utils\class</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\type_name.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

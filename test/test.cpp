@@ -13,6 +13,7 @@ void ExecuteSmartPointerCode();
 void ExecuteClassTestCode();
 void ExecuteOtherTestCode();
 void ExecuteRLValueNSCode();
+void ExecuteParamTypeNSCode();
 
 int main()
 {
@@ -25,8 +26,9 @@ int main()
     //ExecuteSmartPointerCode();
     //ExecuteClassTestCode();
     //ExecuteOtherTestCode();
-    ExecuteRLValueNSCode();
+    //ExecuteRLValueNSCode();
     //ExecuteExceptionTestCode();
+    ExecuteParamTypeNSCode();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
