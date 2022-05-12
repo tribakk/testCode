@@ -130,36 +130,36 @@ namespace threadsNS
 
 	void Example03()
 	{
-		std::atomic<int> value = 0;
-		//int value = 0;
-		int Count = 100000;
-		bool bFetch = false;
-		auto func = [&]
-		{
-			for (int i = 0; i < Count; i++)
-			{
-				if (bFetch)
-				{
-					//value.fetch_add(1);
-				}
-				else
-				{
-					value++;
-				}
+		//std::atomic<int> value = 0;
+		////int value = 0;
+		//int Count = 100000;
+		//bool bFetch = false;
+		//auto func = [&]
+		//{
+		//	for (int i = 0; i < Count; i++)
+		//	{
+		//		if (bFetch)
+		//		{
+		//			//value.fetch_add(1);
+		//		}
+		//		else
+		//		{
+		//			value++;
+		//		}
 
-			}
-		};
+		//	}
+		//};
 
-		std::thread t1(func);
+		//std::thread t1(func);
 
-		std::thread t2(func);
+		//std::thread t2(func);
 
-		std::cout << value << std::endl;
+		//std::cout << value << std::endl;
 
-		t1.join();
-		t2.join();
+		//t1.join();
+		//t2.join();
 
-		std::cout << value << std::endl;
+		//std::cout << value << std::endl;
 	}
 
 	void Example04()
